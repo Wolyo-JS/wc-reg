@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
     } else {
       newName = `${member.user.tag.includes(client.config.tag) ? client.config.tag : client.config.defaultTag} ${args.join(" ")}`;
     };
-    await member.setNickname(newName).catch(err => { return undefined; });
+    await member.setNickname(`${name} | ${age}`).catch(err => { return undefined; });
   };
   if (client.config.unregisterRoles.some(r => member.roles.cache.has(r))) {
     await teyitci.findByIdAndUpdate(message.author.id, { $inc: { teyitler: 1 } }, { upsert: true });
