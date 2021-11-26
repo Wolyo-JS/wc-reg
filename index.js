@@ -56,4 +56,4 @@ var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 client.on('warn', e => { console.log(chalk.bgYellow(e.replace(regToken, 'that was redacted'))); });
 client.on('error', e => { console.log(chalk.bgRed(e.replace(regToken, 'that was redacted'))); });
 
-client.login(config.botToken).then(x => console.log(`${client.user.tag} olarak bota giriş yapıldı!`)).catch(err => console.error(`Bota giriş yapılamadı!\n[HATA]: ${err}`));
+client.login(process.env.token).then(x => console.log(`${client.user.tag} olarak bota giriş yapıldı!`)).catch(err => console.error(`Bota giriş yapılamadı!\n[HATA]: ${err}`));
