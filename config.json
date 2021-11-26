@@ -1,17 +1,17 @@
 {
-  "prefixes": ["!","."],
+  "prefixes": ["."],
   "botToken": "",
-  "developers": ["", "367679437816463360"],
-  "mongooseConnectURL": "",
-  "botStatus": "Yashinu ❤️ Serendia",
+  "developers": ["810161653756198933"],
+  "mongooseConnectURL": "mongodb+srv://thewolyoxd:thewolyoxd@thewolyoxd.u92ds.mongodb.net/thewolyoxd?retryWrites=true&w=majority",
+  "botStatus": "Wolyo ❤️ Wolyo Community",
   "name_age": true,
   "embedColor": "RANDOM",
   "defaultTag": "",
   "tag": "",
-  "staffRoles": [],
-  "invalids": [],
-  "unregisterRoles": [],
-  "boyRoles": [],
-  "girlRoles": [],
-  "tagRoles": []
+  "staffRoles": ["913784831639445515"],
+  "invalids": ["886513620001898527","886513688268378122","886513799228690502"],
+  "unregisterRoles": ["886516012336427018"],
+  "boyRoles": ["886516013091397663"],
+  "girlRoles": ["913392437836279878"],
+  "tagRoles": [""]
 }
