@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
   } else {
     newName = `${member.user.tag.includes(client.config.tag) ? client.config.tag : client.config.defaultTag} ${args.join(" ")}`;
   };
-  member.setNickname(`${name} | ${age}).catch(err => { return undefined; });
+  member.setNickname(`${name} | ${age}`).catch(err => { return undefined; });
   message.react("<a:wolyoparadiseonay:913823641014263868>");
 };
 
