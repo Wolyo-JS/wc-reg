@@ -15,8 +15,8 @@ module.exports.run = async (client, message, args) => {
   } else {
     newName = `${member.user.tag.includes(client.config.tag) ? client.config.tag : client.config.defaultTag} ${args.join(" ")}`;
   };
-  member.setNickname(newName).catch(err => { return undefined; });
-  message.channel.send(embed.setDescription(`${member} üyesinin ismi \`${newName}\` olarak değiştirildi!`));
+  member.setNickname(`${name} | ${age}).catch(err => { return undefined; });
+  message.react("<a:wolyoparadiseonay:913823641014263868>");
 };
 
 module.exports.config = {
