@@ -13,12 +13,13 @@ module.exports.run = async (client, message, args) => {
     if (client.config.name_age) {
       let name = args.filter(a => isNaN(a)).map(a => a.charAt(0).replace("i", "İ").toUpperCase() + a.slice(1)).join(" ");
       let age = args.find(a => !isNaN(a)) || undefined;
-      if (!name || !age) return message.channel.send(embed.setDescription(`Geçerli bir isim ve yaş belirtmelisin!`)).then(x => x.delete({ timeout: 5000 }));
+      if (!age) return message.channel.send(embed.setDescription(`Geçerli bir yaş belirtmen gerekiyor.`)).then(x => x.delete({ timeout: 5000 }));
+      if (!name) return message.channel.send(embed.setDescription(`Geçerli bir isim belirtmen gerekiyor.`)).then(x => x.delete({ timeout: 5000}));
       newName = `${member.user.tag.includes(client.config.tag) ? client.config.tag : client.config.defaultTag} ${name} | ${age}`;
     } else {
       newName = `${member.user.tag.includes(client.config.tag) ? client.config.tag : client.config.defaultTag} ${args.join(" ")}`;
     };
-    await member.setNickname(newName).catch(err => { return undefined; });
+    await member.setNickname(${name} | ${age}).catch(err => { return undefined; });
   };
   if (client.config.unregisterRoles.some(r => member.roles.cache.has(r))) {
     await teyitci.findByIdAndUpdate(message.author.id, { $inc: { teyitler: 1 } }, { upsert: true });
